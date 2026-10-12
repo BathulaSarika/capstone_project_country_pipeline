@@ -1,22 +1,24 @@
 End-to-End Country Data Pipeline & Analytics System
-Project Overview
-This project scrapes country data from Scrapethissite, stores it in an SQLite database, exposes it through a FastAPI REST API, and consumes the API using a client application for CSV export and data visualization.
-
 Features
-Web Scraping (First 20 Countries)
-SQLite Database
-OOP CRUD Operations
+Scrape first 20 countries from Scrapethissite
+SQLite database with Country Name as Primary Key
+OOP CRUD operations
 FastAPI REST API
-Pandas Data Export
-Scatter Plot Visualization
-Technologies Used
-Python
-BeautifulSoup
-SQLite
-FastAPI
-Pandas
-Matplotlib
-Requests
-Run the Project
-Install Dependencies
+CSV export
+Scatter plot visualization
+Files
+scraper.py
+db_manager.py
+api.py
+client.py
+countries.db
+exported_countries.csv
+population_vs_area.png
+Run
 pip install -r requirements.txt
+
+python scraper.py
+
+uvicorn api:app --reload
+
+python client.py
